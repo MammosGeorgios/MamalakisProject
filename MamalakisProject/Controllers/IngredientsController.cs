@@ -18,7 +18,7 @@ namespace MamalakisProject.Controllers
         public ActionResult Index()
         {
             var ingredients = db.Ingredients.Include(i => i.IngredientType);
-            return View(ingredients.ToList());
+            return View(ingredients.ToList().OrderBy(x =>x.Name));
         }
 
         // GET: Ingredients/Details/5
