@@ -17,7 +17,8 @@ namespace MamalakisProject.Controllers
         // GET: Ingredients
         public ActionResult Index()
         {
-            return View(db.Ingredients.ToList());
+            var ingredients = db.Ingredients.Include(i => i.IngredientType);
+            return View(ingredients.ToList());
         }
 
         // GET: Ingredients/Details/5
@@ -38,6 +39,7 @@ namespace MamalakisProject.Controllers
         // GET: Ingredients/Create
         public ActionResult Create()
         {
+            ViewBag.IngredientTypeId = new SelectList(db.IngredientTypes, "Id", "IngredientTypeName");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace MamalakisProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Type")] Ingredient ingredient)
+        public ActionResult Create([Bind(Include = "Id,Name,IngredientTypeId")] Ingredient ingredient)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace MamalakisProject.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.IngredientTypeId = new SelectList(db.IngredientTypes, "Id", "IngredientTypeName", ingredient.IngredientTypeId);
             return View(ingredient);
         }
 
@@ -70,6 +73,7 @@ namespace MamalakisProject.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.IngredientTypeId = new SelectList(db.IngredientTypes, "Id", "IngredientTypeName", ingredient.IngredientTypeId);
             return View(ingredient);
         }
 
@@ -78,7 +82,7 @@ namespace MamalakisProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Type")] Ingredient ingredient)
+        public ActionResult Edit([Bind(Include = "Id,Name,IngredientTypeId")] Ingredient ingredient)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace MamalakisProject.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.IngredientTypeId = new SelectList(db.IngredientTypes, "Id", "IngredientTypeName", ingredient.IngredientTypeId);
             return View(ingredient);
         }
 

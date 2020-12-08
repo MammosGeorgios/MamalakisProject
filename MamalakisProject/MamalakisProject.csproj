@@ -221,11 +221,6 @@
     <Content Include="Views\IngredientsPerRecipes\Details.cshtml" />
     <Content Include="Views\IngredientsPerRecipes\Edit.cshtml" />
     <Content Include="Views\IngredientsPerRecipes\Index.cshtml" />
-    <Content Include="Views\Ingredients\Create.cshtml" />
-    <Content Include="Views\Ingredients\Delete.cshtml" />
-    <Content Include="Views\Ingredients\Details.cshtml" />
-    <Content Include="Views\Ingredients\Edit.cshtml" />
-    <Content Include="Views\Ingredients\Index.cshtml" />
     <Content Include="Views\Creators\Create.cshtml" />
     <Content Include="Views\Creators\Delete.cshtml" />
     <Content Include="Views\Creators\Details.cshtml" />
@@ -236,6 +231,11 @@
     <Content Include="Views\IngredientTypes\Details.cshtml" />
     <Content Include="Views\IngredientTypes\Edit.cshtml" />
     <Content Include="Views\IngredientTypes\Index.cshtml" />
+    <Content Include="Views\Ingredients\Create.cshtml" />
+    <Content Include="Views\Ingredients\Delete.cshtml" />
+    <Content Include="Views\Ingredients\Details.cshtml" />
+    <Content Include="Views\Ingredients\Edit.cshtml" />
+    <Content Include="Views\Ingredients\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

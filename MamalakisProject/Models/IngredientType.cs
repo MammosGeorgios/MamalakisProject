@@ -10,7 +10,7 @@ namespace MamalakisProject.Models
     {
         public int Id { get; set; }
 
-        [Display(Name="Ingretient Type")]
+        [Display(Name="Ingredient Type")]
         public string IngredientTypeName { get; set; }
     }
 }
