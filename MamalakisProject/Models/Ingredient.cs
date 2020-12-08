@@ -13,6 +13,8 @@ namespace MamalakisProject.Models
 
         public string Type { get; set; }
 
+        public int IngredientTypeId { get; set; }
+        public IngredientType IngredientType { get; set; }
         public ICollection<IngredientsPerRecipe> IngredientsPerRecipeId { get; set; }
     }
 }

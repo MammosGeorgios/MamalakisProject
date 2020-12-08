@@ -17,6 +17,8 @@ namespace MamalakisProject.Models
         public DbSet<Ingredient> Ingredients { get; set; }
 
         public DbSet<IngredientsPerRecipe> IngredientsPerRecipies { get; set; }
+
+        public System.Data.Entity.DbSet<MamalakisProject.Models.IngredientType> IngredientTypes { get; set; }
     }
 
    
