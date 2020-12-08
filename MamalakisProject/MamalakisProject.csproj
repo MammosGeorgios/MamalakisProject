@@ -160,6 +160,10 @@
     <Compile Include="Migrations\202012080911218_UpdateIngredient.Designer.cs">
       <DependentUpon>202012080911218_UpdateIngredient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012081117362_ShortName.cs" />
+    <Compile Include="Migrations\202012081117362_ShortName.Designer.cs">
+      <DependentUpon>202012081117362_ShortName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Creator.cs" />
     <Compile Include="Models\Ingredient.cs" />
@@ -262,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012080911218_UpdateIngredient.resx">
       <DependentUpon>202012080911218_UpdateIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012081117362_ShortName.resx">
+      <DependentUpon>202012081117362_ShortName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
